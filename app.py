@@ -1,6 +1,7 @@
 from icmplib import ping
 import os
 
+# comment
 host = ping('192.168.0.250', count=4, interval=0.2)
 
 
