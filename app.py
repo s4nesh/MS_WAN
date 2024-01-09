@@ -2,11 +2,9 @@ from icmplib import ping
 import os
 
 # comment
-host = ping('192.168.0.250', count=4, interval=0.2)
-
+host = ping('192.168.0.250', count=4, interval=0.2, privileged=False)
 
 typed_quit = False
-
 while not typed_quit:
     user_input = input("> ").lower()
     if user_input == 'check gateway':
@@ -20,4 +18,3 @@ while not typed_quit:
         os.system('cls')
     else:
         print('Command not found')
-
